@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Train Scheduler</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="jumbotron">
+
+                    <h1>Anytime is Train Time</h1>
+                    <h3>Choo Choo. Chee Chee.</h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="container schedule-container">
+            <div class="row">
+
+                <div class="col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Current Train Schedule</h3>
+                        </div>
+                        <div class="panel-body">
+
+                            <!-- User Output-->
+                            <table class="train-schedule">
+                                <tbody id="current-train-time">
+                                    <tr>
+                                        <th class="col-xs-3">Train Name
+                                        </th>
+                                        <th class="col-xs-2">Destination
+                                        </th>
+                                        <th class="col-xs-2">Frequency (min)
+                                        </th>
+                                        <th class="col-xs-2">Next Arrival
+                                        </th>
+                                        <th class="col-xs-2">Minutes Away
+                                        </th>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container input-container">
+            <div class="row">
+
+                <div class="col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Add Train</h3>
+                        </div>
+                        <div class="panel-body">
+
+                            <!-- User Input-->
+                            <form role="form">
+                                <div class="form-group">
+                                    <label for="train-input">Train Name:</label>
+                                    <input class="form-control" id="train-input" type="text">
+                                </div>
+                                <div class="form-group">
+                                    <label for="destination-input">Destination:</label>
+                                    <input class="form-control" id="destination-input" type="text">
+                                </div>
+                                <div class="form-group">
+                                    <label for="time-input">First Train Time:</label>
+                                    <input class="form-control" id="time-input" type="time">
+                                </div>
+                                <div class="form-group">
+                                    <label for="freq-input">Frequency</label>
+                                    <input class="form-control" id="freq-input" type="number">
+                                </div>
+                                <button type="submit" class="btn btn-primary" id="add-user">Submit</button>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Firebase Javascript Link -->
+        <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
+
+        <!-- JQuery Link -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+            crossorigin="anonymous"></script>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+
+        <!-- Moment.JS Link -->
+        <script src="https://rawgit.com/moment/moment/2.2.1/min/moment.min.js"></script>
+
+        <!-- Javascript Link -->
+        <script src="assets/js/app.js"></script>
+
+</body>
+
+</html>
